@@ -1,0 +1,118 @@
+/* Modal Background */
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Modal Box */
+.custom-modal {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Header */
+.checkmark-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* Checkmark SVG */
+.checkmark {
+    width: 52px;
+    height: 52px;
+    stroke-width: 4;
+    stroke: #4CAF50;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: drawCheck 0.6s ease-in-out forwards;
+}
+
+/* Checkmark Circle */
+.checkmark-circle {
+    stroke: #4CAF50;
+    stroke-width: 4;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: drawCircle 0.6s ease-in-out forwards;
+}
+
+/* Checkmark Path */
+.checkmark-check {
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: drawCheck 0.3s ease-in-out 0.5s forwards;
+}
+
+/* Body */
+.custom-modal-body h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.custom-modal-body p {
+    font-size: 16px;
+    color: #eee;
+    margin-top: 5px;
+}
+
+/* Footer Button */
+.custom-modal-footer {
+    margin-top: 20px;
+}
+
+.custom-modal-confirm {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    background: #4CAF50;
+    color: white;
+    transition: 0.3s;
+}
+
+.custom-modal-confirm:hover {
+    background: #45a049;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes drawCircle {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes drawCheck {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
